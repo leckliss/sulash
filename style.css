@@ -1,0 +1,253 @@
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+body {
+    background: #FFEBEC;
+}
+
+header {
+    width: 100%;
+    height: 230px;
+    background-image: url(assets/fundo_header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 5;
+    top: 0;
+}
+
+ul {
+    width: 65%;
+    height: 100px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.headerlinks {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    color: black;
+    font-size: 35px;
+    text-decoration: none;
+    border-bottom: 3px solid black;
+}
+
+.logo {
+    width: 244px;
+    height: 145px;
+}
+
+main {
+    width: 100%;
+    height: 800vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#principal img {
+    margin-top: 200px;
+    width: 650px;
+    height: 700px;
+}
+
+#principal div {
+    margin-top: 250px;
+    width: 650px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+#principal h2 {
+    font-size: 60px;
+}
+
+
+#grid {
+    margin-top: 200px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#grid h2{
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    margin-bottom: 100px;
+}
+
+.angry-grid {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    gap: 50px;
+    height: 100%;
+
+}
+
+#item-0 {
+
+    background-image: url(assets/cilios\ 0.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 3;
+    grid-column-end: 3;
+    height: 565px;
+    width: 425px;
+}
+
+#item-1 {
+
+    background-image: url(assets/cilios\ 1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 3;
+    grid-column-start: 1;
+
+    grid-row-end: 4;
+    grid-column-end: 3;
+    height: 338px;
+    width: 425px;
+}
+
+#item-2 {
+
+    background-image: url(assets/cilios\ 2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 5;
+    height: 329px;
+    width: 450px;
+}
+
+#item-3 {
+
+    background-image: url(assets/cilios\ 3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-column-start: 5;
+
+    grid-row-end: 2;
+    grid-column-end: 7;
+    height: 329px;
+    width: 450px;
+}
+
+#item-4 {
+
+    background-image: url(assets/cilios\ 4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 2;
+    grid-column-start: 3;
+
+    grid-row-end: 4;
+    grid-column-end: 7;
+    height: 728px;
+    width: 950px;
+
+}
+
+#fundo {
+    width: 100%;
+    height: 339vh;
+    z-index: 2;
+    background-image: url(assets/fundo_2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 170vh;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .headerlinks {
+        display: none;
+    }
+
+    #principal img {
+        margin-top: 300px;
+        width: 450px;
+        height: 500px;
+    }
+    
+    #principal div {
+        display: none;
+    }
+    #grid{
+        height: 300vh;
+    }
+    #grid h2{
+        margin-left: 50px;
+    }
+    .angry-grid {
+        display: flex;
+        flex-direction: column;
+        height: 2489px;
+    }
+    #item-0,#item-1, #item-2, #item-3, #item-4{
+        
+        width: 369px;
+        border-radius: 30px;
+    }
+
+    #fundo {
+        width: 100%;
+        height: 339vh;
+        margin-top: -30%;
+        z-index: 2;
+        background-image: url(assets/fundo_2-mobile.png);
+        background-repeat: no-repeat;
+        margin-right: 0;
+    }
+}
