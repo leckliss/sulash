@@ -313,6 +313,9 @@ main {
     background-color: #FFC7CC;
 }
 @media screen and (max-width: 768px) {
+    main{
+        height: auto;
+    }
 
     .headerlinks {
         display: none;
@@ -340,7 +343,7 @@ main {
     }
     #item-0,#item-1, #item-2, #item-3, #item-4{
         
-        width: 369px;
+        width: 400px;
         border-radius: 30px;
     }
 
@@ -348,14 +351,22 @@ main {
         background-image: url(assets/fundo_2-mobile.png);
     }
 
-    #servicosdiv{
+    #serivicos,#servicosdiv{
         height: auto;
         flex-direction: column;
         justify-content: center;
     }
+    
+   
     #produtos{
         width: 80%;
         height: 500px;
         background-color: #FFEBEC;
+    }
+    #contato{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 275vh;
     }
 }
