@@ -9,6 +9,7 @@
 
 body {
     background: #FFEBEC;
+    overflow-x: hidden;
 }
 
 header {
@@ -56,7 +57,7 @@ ul {
 
 main {
     width: 100%;
-    height: 700vh;
+    height: 600vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -102,7 +103,8 @@ main {
     justify-content: center;
     flex-direction: column;
 }
-#grid h2{
+
+#grid h2 {
     font-size: 40px;
     font-style: normal;
     font-family: 'Roboto Light';
@@ -217,7 +219,8 @@ main {
     text-align: center;
     z-index: 3;
 }
-#servicos h2{
+
+#servicos h2 {
     font-size: 40px;
     font-style: normal;
     font-family: 'Roboto Light';
@@ -225,7 +228,7 @@ main {
     margin-bottom: 100px;
 }
 
-#servicosdiv{
+#servicosdiv {
     width: 100%;
     display: flex;
     align-items: center;
@@ -234,16 +237,17 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
 }
-#produtos{
+
+#produtos {
     width: 25%;
     height: 500px;
     background-color: #FFEBEC;
     border: 2px solid;
     border-radius: 30px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-#contato{
+#contato {
     margin-top: 40vh;
     width: 100%;
     height: 100vh;
@@ -253,14 +257,16 @@ main {
     flex-direction: column;
     z-index: 1;
 }
-#contato h2{
+
+#contato h2 {
     font-size: 40px;
     font-style: normal;
     font-family: 'Roboto Light';
     font-weight: 200;
     margin-bottom: 100px;
 }
-#contatodiv{
+
+#contatodiv {
     width: 90%;
     height: 90vh;
     display: flex;
@@ -269,14 +275,21 @@ main {
     background-color: #FFC7CC;
     border-radius: 30px;
 }
-#suelen, #studio{
+
+#suelen,
+#studio {
     width: 45%;
     height: 80vh;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-#studio{}
 
-#local{
+#studio {}
+
+#local {
     margin-top: 20vh;
     width: 100%;
     height: 100vh;
@@ -285,88 +298,159 @@ main {
     justify-content: center;
     flex-direction: column;
     z-index: 1;
-    
+
 }
-#local h2{
+
+#local h2 {
     font-size: 40px;
     font-style: normal;
     font-family: 'Roboto Light';
     font-weight: 200;
     margin-bottom: 100px;
 }
-#localdiv{
+
+#localdiv {
     width: 100%;
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-   
+
 }
-#frame, #endereco{
+
+#frame,
+#endereco {
     width: 45%;
     height: 60vh;
     border-radius: 30px;
 }
-#endereco{
+
+#endereco {
     height: 70vh;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: #FFC7CC;
 }
-@media screen and (max-width: 768px) {
-    main{
-        height: auto;
-    }
+#endereco p{
+    font-size: 25px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    margin-bottom: 50px;
+}
 
-    .headerlinks {
-        display: none;
-    }
-
-    #principal img {
-        margin-top: 300px;
-        width: 450px;
-        height: 500px;
-    }
-    
-    #principal div {
-        display: none;
-    }
-    #grid{
-        height: 300vh;
-    }
-    #grid h2{
-        margin-left: 50px;
-    }
-    .angry-grid {
-        display: flex;
-        flex-direction: column;
-        height: 2489px;
-    }
-    #item-0,#item-1, #item-2, #item-3, #item-4{
-        
-        width: 400px;
-        border-radius: 30px;
-    }
-
+@media screen and (max-width: 1426px) {
     #fundo {
-        background-image: url(assets/fundo_2-mobile.png);
+        display: none;
     }
 
-    #serivicos,#servicosdiv{
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-   
-    #produtos{
-        width: 80%;
-        height: 500px;
-        background-color: #FFEBEC;
-    }
-    #contato{
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 275vh;
+    @media screen and (max-width: 1136px) {
+        #principal img {
+            margin-left: 20%;
+        }
+
+        @media screen and (max-width: 768px) {
+            #principal img {
+                margin-left: 0;
+            }
+
+            main {
+                height: auto;
+            }
+
+            ul {
+                width: 100%;
+            }
+
+            .headerlinks {
+                display: none;
+            }
+
+            #principal img {
+                margin-top: 300px;
+                width: 450px;
+                height: 500px;
+            }
+
+            #principal div {
+                display: none;
+            }
+
+            #grid {
+                height: 300vh;
+            }
+
+            #grid h2 {
+                margin-left: 50px;
+            }
+
+            .angry-grid {
+                display: flex;
+                flex-direction: column;
+                height: 2489px;
+            }
+
+            #item-0,
+            #item-1,
+            #item-2,
+            #item-3,
+            #item-4 {
+
+                width: 400px;
+                border-radius: 30px;
+            }
+
+            #fundo {
+                background-image: url(assets/fundo_2-mobile.png);
+            }
+
+            #serivicos,
+            #servicosdiv {
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            #produtos {
+                width: 80%;
+                height: 500px;
+                background-color: #FFEBEC;
+            }
+
+            #contato {
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 275vh;
+            }
+            #contatodiv{
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #localdiv {
+                height: auto;
+                flex-direction: column;
+
+            }
+
+            iframe {
+                height: 300px;
+            }
+
+            #endereco {
+                margin-top: -20vh;
+                width: 90%;
+                height: auto;
+            }
+            #maps{
+                margin-bottom: 30px;
+            }
+        }
     }
 }
