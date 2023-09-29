@@ -11,9 +11,10 @@
     font-family: 'Roboto Light', sans-serif;
     font-family: 'Roboto Medium', sans-serif;
     font-family: 'Roboto Black', sans-serif;
-    
+
 }
-html{
+
+html {
     overflow-x: hidden;
 }
 
@@ -21,18 +22,21 @@ body {
     background: #FFEBEC;
     overflow-x: hidden;
 }
+
 section {
     position: relative;
 }
-.hidden{
+
+.hidden {
     opacity: 0;
     filter: blur(15px);
     transition: all 2s;
     transform: translateX(-100%);
     overflow: hidden;
-    
+
 }
-.show{
+
+.show {
     opacity: 1;
     filter: blur(0);
     transition: all 3s;
@@ -75,6 +79,10 @@ ul {
     font-size: 35px;
     text-decoration: none;
     border-bottom: 3px solid black;
+}
+
+.headerlinks:hover {
+    border-bottom: 8px solid black;
 }
 
 .logo {
@@ -123,7 +131,7 @@ main {
 
 
 #grid {
-    margin-top: 200px;
+    margin-top: 10vh;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -295,7 +303,7 @@ main {
     font-family: 'Roboto Light';
     font-weight: 200;
     margin-bottom: 100px;
-    
+
 }
 
 #contatodiv {
@@ -307,6 +315,65 @@ main {
     background-color: #FFC7CC;
     border-radius: 30px;
 }
+
+#insta,
+#tiktok,
+#faceb,
+#whats {
+    background-color: #FFCFCF;
+    width: 50%;
+    height: 100px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#instaimg {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/insta.png);
+}
+
+#instaimg:hover {
+    background-image: url(assets/insta_black.png);
+}
+
+#tiktokimg {
+    margin-left: -30px;
+    width: 37px;
+    height: 43px;
+    background-image: url(assets/tiktok.png);
+}
+
+#tiktokimg:hover {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/tiktok_black.png);
+}
+
+#facebookimg {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/facebook.png);
+}
+
+#facebookimg:hover {
+    background-image: url(assets/facebook_black.png);
+}
+
+#whatsappimg {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/whatsapp.png);
+}
+
+#whatsappimg:hover {
+    background-image: url(assets/whatsapp_black.png);
+}
+
+
 
 #suelen,
 #studio {
@@ -320,8 +387,9 @@ main {
 }
 
 #studio {}
-#imgparc{
-    height: 75%; 
+
+#imgparc {
+    height: 75%;
     width: 80%;
 }
 
@@ -478,8 +546,21 @@ main {
                 flex-direction: column;
                 justify-content: center;
             }
-            #imgparc{
-                height: 75%; width: 200%;
+
+            #suelen,
+            #studio {
+                width: 100%;
+            }
+            #insta,
+            #tiktok,
+            #faceb,
+            #whats {
+                width: 100%;
+            }
+
+            #imgparc {
+                height: 50%;
+                width: 90%;
             }
 
             #localdiv {
