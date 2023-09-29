@@ -17,6 +17,20 @@ body {
     background: #FFEBEC;
     overflow-x: hidden;
 }
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 2s;
+    transform: translateX(-100%);
+    overflow: hidden;
+    
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transition: all 3s;
+    transform: translateX(0);
+}
 
 header {
     width: 100%;
@@ -63,9 +77,10 @@ ul {
 
 main {
     width: 100%;
-    height: 600vh;
+    height: auto !important;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
