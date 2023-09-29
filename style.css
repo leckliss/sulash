@@ -105,7 +105,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 
 #principal img {
@@ -482,11 +481,14 @@ main {
             .headerlinks {
                 display: none;
             }
+            #principal{
+                height: auto;
+            }
 
             #principal img {
-                margin-top: 300px;
-                width: 450px;
-                height: 500px;
+                margin-top: 65%;
+                width: 100%;
+                height: 80%;
             }
 
             #principal div {
@@ -494,7 +496,7 @@ main {
             }
 
             #grid {
-                height: 300vh;
+                height: auto;
             }
 
             #grid h2 {
