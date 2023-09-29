@@ -11,6 +11,10 @@
     font-family: 'Roboto Light', sans-serif;
     font-family: 'Roboto Medium', sans-serif;
     font-family: 'Roboto Black', sans-serif;
+    
+}
+html{
+    overflow-x: hidden;
 }
 
 body {
@@ -398,6 +402,7 @@ main {
             }
 
             ul {
+                height: auto;
                 width: 100%;
             }
 
