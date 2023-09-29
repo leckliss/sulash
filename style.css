@@ -17,6 +17,9 @@ body {
     background: #FFEBEC;
     overflow-x: hidden;
 }
+section {
+    position: relative;
+}
 .hidden{
     opacity: 0;
     filter: blur(15px);
@@ -130,7 +133,6 @@ main {
     font-style: normal;
     font-family: 'Roboto Light';
     font-weight: 200;
-    margin-bottom: 100px;
 }
 
 .angry-grid {
