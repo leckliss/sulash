@@ -237,9 +237,9 @@ main {
 }
 
 #servicos {
-    margin-top: 50vh;
+    margin-top: 45vh;
     width: 100%;
-    height: 150vh;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -279,9 +279,9 @@ main {
 }
 
 #contato {
-    margin-top: 60vh;
+    margin-top: 65vh;
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,11 +295,12 @@ main {
     font-family: 'Roboto Light';
     font-weight: 200;
     margin-bottom: 100px;
+    
 }
 
 #contatodiv {
     width: 90%;
-    height: 90vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -310,7 +311,7 @@ main {
 #suelen,
 #studio {
     width: 45%;
-    height: 80vh;
+    height: 90vh;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -319,6 +320,10 @@ main {
 }
 
 #studio {}
+#imgparc{
+    height: 75%; 
+    width: 80%;
+}
 
 #local {
     margin-top: 20vh;
@@ -466,13 +471,15 @@ main {
                 height: auto;
                 flex-direction: column;
                 justify-content: center;
-                margin-top: 275vh;
             }
 
             #contatodiv {
                 height: auto;
                 flex-direction: column;
                 justify-content: center;
+            }
+            #imgparc{
+                height: 75%; width: 200%;
             }
 
             #localdiv {
