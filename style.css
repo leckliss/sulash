@@ -3,14 +3,14 @@
 .hidden{
     opacity: 0;
     filter: blur(15px);
-    transition: all 2s;
+    transition: all 1s;
     transform: translateX(-100%);
 }
 
 .show{
     opacity: 1;
     filter: blur(0);
-    transition: all 3s;
+    transition: all 1s;
     transform: translateX(0);
 }
 
@@ -143,7 +143,7 @@ main {
 #grid {
     margin-top: 10vh;
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,7 +247,6 @@ main {
 #fundo {
     width: 100%;
     height: 339vh;
-    z-index: 2;
     background-image: url(assets/fundo_2.png);
     background-repeat: no-repeat;
     position: absolute;
@@ -255,14 +254,14 @@ main {
 }
 
 #servicos {
-    margin-top: 45vh;
+    margin-top: 25vh;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    z-index: 3;
+    z-index: 2;
 }
 
 #servicos h2 {
@@ -297,14 +296,13 @@ main {
 }
 
 #contato {
-    margin-top: 65vh;
+    margin-top: 20vh;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 1;
 }
 
 #contato h2 {
@@ -339,7 +337,9 @@ main {
     justify-content: center;
     margin-bottom: 30px;
 }
-
+#insta{
+    margin-top: 10px;
+}
 #instaimg {
     width: 71px;
     height: 71px;
@@ -501,6 +501,10 @@ main {
                 width: 100%;
                 height: 80%;
             }
+            .logo.scrolled{
+                height: 70px;
+                width: 124.62px;
+            }
 
             #principal div {
                 display: none;
@@ -575,11 +579,13 @@ main {
                 height: 50%;
                 width: 90%;
             }
-
+            #local{
+                margin-top: 10vh;
+                height: auto;
+            }
             #localdiv {
                 height: auto;
                 flex-direction: column;
-
             }
 
             iframe {
@@ -587,7 +593,6 @@ main {
             }
 
             #endereco {
-                margin-top: -20vh;
                 width: 90%;
                 height: auto;
             }
