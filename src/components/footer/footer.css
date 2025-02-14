@@ -1,0 +1,27 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.footer-container__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer-container-div_botoes{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-container-div_botoes a {
+    padding: 0.7rem;
+    border: 2px solid #FF7EAF;
+    border-radius: 50%;
+}

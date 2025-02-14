@@ -1,0 +1,605 @@
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+    transform: translateX(0);
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Thin', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Roboto Medium', sans-serif;
+    font-family: 'Roboto Black', sans-serif;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #FFEBEC;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 230px;
+    background-image: url(assets/fundo_header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 5;
+    top: 0;
+}
+header.scrolled{
+    height: 80px;
+}
+
+ul {
+    width: 65%;
+    height: 100px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.headerlinks {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    color: black;
+    font-size: 35px;
+    text-decoration: none;
+    border-bottom: 3px solid black;
+}
+
+.headerlinks:hover {
+    border-bottom: 8px solid black;
+}
+.logodiv{
+    width: auto;
+    height: auto;
+}
+.logo {
+    height: 145px; 
+    width: 244px;
+    background-image: url(assets/logo.png);
+}
+.logo.scrolled{
+    height: 80px;
+    width: 134.62px;
+    background-image: url(assets/logopq.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#principal img {
+    margin-top: 200px;
+    width: 650px;
+    height: 700px;
+}
+
+#principal div {
+    margin-top: 250px;
+    width: 650px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+#principal h2 {
+    font-size: 60px;
+}
+
+
+#grid {
+    margin-top: 10vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#grid h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+}
+
+.angry-grid {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    gap: 50px;
+    height: 100%;
+
+}
+
+#item-0 {
+
+    background-image: url(assets/cilios\ 0.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 3;
+    grid-column-end: 3;
+    height: 565px;
+    width: 425px;
+}
+
+#item-1 {
+
+    background-image: url(assets/cilios\ 1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 3;
+    grid-column-start: 1;
+
+    grid-row-end: 4;
+    grid-column-end: 3;
+    height: 338px;
+    width: 425px;
+}
+
+#item-2 {
+
+    background-image: url(assets/cilios\ 2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 5;
+    height: 329px;
+    width: 450px;
+}
+
+#item-3 {
+
+    background-image: url(assets/cilios\ 3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-column-start: 5;
+
+    grid-row-end: 2;
+    grid-column-end: 7;
+    height: 329px;
+    width: 450px;
+}
+
+#item-4 {
+
+    background-image: url(assets/cilios\ 4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 2;
+    grid-column-start: 3;
+
+    grid-row-end: 4;
+    grid-column-end: 7;
+    height: 728px;
+    width: 950px;
+
+}
+
+#fundo {
+    width: 100%;
+    height: 339vh;
+    background-image: url(assets/fundo_2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 170vh;
+}
+
+#servicos {
+    margin-top: 25vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+}
+
+#servicos h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    margin-bottom: 100px;
+}
+
+#servicosdiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#produtos {
+    width: 25%;
+    height: 500px;
+    background-color: #FFEBEC;
+    border: 2px solid;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contato {
+    margin-top: 20vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contato h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    margin-bottom: 100px;
+
+}
+
+#contatodiv {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFC7CC;
+    border-radius: 30px;
+}
+
+#insta,
+#tiktok,
+#faceb,
+#whats {
+    background-color: #FFCFCF;
+    width: 50%;
+    height: 100px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#insta{
+    margin-top: 10px;
+}
+#instaimg {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/insta.png);
+}
+
+#instaimg:hover {
+    background-image: url(assets/insta_black.png);
+}
+
+#tiktokimg {
+    margin-left: -30px;
+    width: 37px;
+    height: 43px;
+    background-image: url(assets/tiktok.png);
+}
+
+#tiktokimg:hover {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/tiktok_black.png);
+}
+
+#facebookimg {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/facebook.png);
+}
+
+#facebookimg:hover {
+    background-image: url(assets/facebook_black.png);
+}
+
+#whatsappimg {
+    width: 71px;
+    height: 71px;
+    background-image: url(assets/whatsapp.png);
+}
+
+#whatsappimg:hover {
+    background-image: url(assets/whatsapp_black.png);
+}
+
+
+
+#suelen,
+#studio {
+    width: 45%;
+    height: 90vh;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#studio {}
+
+#imgparc {
+    height: 75%;
+    width: 80%;
+}
+
+#local {
+    margin-top: 20vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+}
+
+#local h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    margin-bottom: 100px;
+}
+
+#localdiv {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#frame,
+#endereco {
+    width: 45%;
+    height: 60vh;
+    border-radius: 30px;
+}
+
+#endereco {
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFC7CC;
+}
+
+#endereco p {
+    font-size: 25px;
+    font-style: normal;
+    font-family: 'Roboto Light';
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+
+#maps {
+    background-image: url(assets/maps.png);
+}
+
+#maps:hover {
+    background-image: url(assets/maps_black.png);
+}
+
+@media screen and (max-width: 1426px) {
+    #fundo {
+        display: none;
+    }
+
+    @media screen and (max-width: 1136px) {
+        #principal img {
+            margin-left: 20%;
+        }
+
+        @media screen and (max-width: 768px) {
+            #principal img {
+                margin-left: 0;
+            }
+
+            main {
+                height: auto;
+            }
+
+            ul {
+                height: auto;
+                width: 100%;
+            }
+
+            .headerlinks {
+                display: none;
+            }
+            #principal{
+                height: auto;
+            }
+
+            #principal img {
+                margin-top: 65%;
+                width: 100%;
+                height: 80%;
+            }
+            .logo.scrolled{
+                height: 70px;
+                width: 124.62px;
+            }
+
+            #principal div {
+                display: none;
+            }
+
+            #grid {
+                height: auto;
+            }
+
+            #grid h2 {
+                margin-left: 50px;
+            }
+
+            .angry-grid {
+                display: flex;
+                flex-direction: column;
+                height: 2489px;
+            }
+
+            #item-0,
+            #item-1,
+            #item-2,
+            #item-3,
+            #item-4 {
+
+                width: 400px;
+                border-radius: 30px;
+            }
+
+            #fundo {
+                background-image: url(assets/fundo_2-mobile.png);
+            }
+
+            #serivicos,
+            #servicosdiv {
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            #produtos {
+                width: 80%;
+                height: 500px;
+                background-color: #FFEBEC;
+            }
+
+            #contato {
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #contatodiv {
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #suelen,
+            #studio {
+                width: 100%;
+            }
+            #insta,
+            #tiktok,
+            #faceb,
+            #whats {
+                width: 100%;
+            }
+
+            #imgparc {
+                height: 50%;
+                width: 90%;
+            }
+            #local{
+                margin-top: 10vh;
+                height: auto;
+            }
+            #localdiv {
+                height: auto;
+                flex-direction: column;
+            }
+
+            iframe {
+                height: 300px;
+            }
+
+            #endereco {
+                width: 90%;
+                height: auto;
+            }
+
+            #maps {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-box: none;
+}
+.app{
+  background-color: #0C0C0C;
+}
