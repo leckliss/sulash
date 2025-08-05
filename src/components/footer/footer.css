@@ -14,6 +14,10 @@
     width: 100%;
 }
 
+.logo-footer {
+    width: 10rem;
+}
+
 .footer-container-div_botoes{
     display: flex;
     justify-content: center;

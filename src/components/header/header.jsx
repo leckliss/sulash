@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/logos/Logo.svg';
+import Logo from '../../assets/logos/Logo.png';
 import './header.css';
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
     return (
         <header className='header-container'>
             <nav className='header-container__nav'>
-                <div ref={logoRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <div className='logo-header' ref={logoRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <Link to="/">
                         <img src={Logo} alt="Logo" />
                     </Link>

@@ -2,6 +2,7 @@
   "name": "sulash",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sulash.com.br",
   "dependencies": {
     "@react-spring/web": "^9.7.5",
     "@testing-library/jest-dom": "^5.17.0",

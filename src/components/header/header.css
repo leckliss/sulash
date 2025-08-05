@@ -7,7 +7,9 @@
   position: relative;
   /* Adicionado para posicionar a barra corretamente */
 }
-
+.logo-header{
+  width: 10rem;
+}
 .header-container__nav {
   display: flex;
   align-items: center;

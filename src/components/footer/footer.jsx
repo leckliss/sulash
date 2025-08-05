@@ -1,4 +1,4 @@
-import LogoFooter from '../../assets/logos/LogoFooter.svg';
+import LogoFooter from '../../assets/logos/LogoFooter.png';
 import TesseractGroup from '../../assets/logos/TesseractGroup.svg';
 
 import React, { Component } from 'react';
