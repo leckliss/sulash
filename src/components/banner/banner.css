@@ -24,10 +24,3 @@
     background-color: #fff;
     color: #000;
   }
-
-  .introduction-container__actions-container button:hover {
-    background-color: #000;
-    transition: background-color 0.5s ease;
-  
-  }
-  
