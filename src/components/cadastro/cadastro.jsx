@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import Logo from '../../assets/logos/Logo.png';
+import '../login/login.css';
 
 function Cadastro({ onLogin }) {
     const [username, setUsername] = useState('');
@@ -14,23 +16,31 @@ function Cadastro({ onLogin }) {
     };
 
     return (
-        <div>
-            <h2>Cadastro</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Usuário"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Senha"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit">Cadastrar</button>
-            </form>
+        <div className="auth-container">
+
+            <Link to="/" className="auth-logo-link">
+                <img src={Logo} className="logo-header" alt="Voltar para Home" />
+            </Link>
+
+            <div className="auth-form">
+                <h2>Cadastro</h2>
+                <div className="input-group">
+                    <input type="text" id="name" required />
+                    <label htmlFor="name">Nome Completo</label>
+                </div>
+                <div className="input-group">
+                    <input type="email" id="email" required />
+                    <label htmlFor="email">Email</label>
+                </div>
+                <div className="input-group">
+                    <input type="password" id="password" required />
+                    <label htmlFor="password">Senha</label>
+                </div>
+                <button className="auth-button">Cadastrar</button>
+                <div className="auth-link">
+                    <p>Já tem uma conta? <a href="/login">Faça Login</a></p>
+                </div>
+            </div>
         </div>
     );
 }

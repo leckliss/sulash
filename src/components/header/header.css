@@ -30,6 +30,27 @@
   color: #FF7EAF;
 }
 
+.header-container__nav button {
+  /* Reseta os estilos padrão do botão */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  /* Aplica os mesmos estilos que você tinha no 'a' */
+  font-family: "Poppins", serif;
+  font-weight: bold;
+  font-size: 1.875rem;
+  text-decoration: none;
+  color: #FF7EAF;
+}
+
+.header-container__nav button img {
+    /* Garante que a imagem do logo não tenha bordas estranhas */
+    display: block;
+}
+
+
 .header-container__divisor {
     height: 2px;
     border-radius: 40px;

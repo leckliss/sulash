@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import Logo from '../../assets/logos/Logo.png';
+import './login.css';
 
 function Login({ onLogin }) {
     const [username, setUsername] = useState('');
@@ -18,23 +20,26 @@ function Login({ onLogin }) {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Usuário"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Senha"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit">Entrar</button>
-            </form>
+        <div className="auth-container">
+                <Link to="/" className="auth-logo-link">
+                    <img src={Logo} className="logo-header" alt="Voltar para Home" />
+                </Link>
+            
+            <div className="auth-form">
+                <h2>Login</h2>
+                <div className="input-group">
+                    <input type="email" id="email" required />
+                    <label htmlFor="email">Email</label>
+                </div>
+                <div className="input-group">
+                    <input type="password" id="password" required />
+                    <label htmlFor="password">Senha</label>
+                </div>
+                <button className="auth-button">Entrar</button>
+                <div className="auth-link">
+                    <p>Não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
+                </div>
+            </div>
         </div>
     );
 }

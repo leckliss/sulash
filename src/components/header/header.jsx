@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; // Não precisamos mais do Link aqui
 import Logo from '../../assets/logos/Logo.png';
 import './header.css';
 
-export default function Header() {
+// 1. Receba a prop 'setActiveComponent'
+export default function Header({ setActiveComponent }) {
     const [divisorPosition, setDivisorPosition] = useState({ left: 0, width: 0 });
     const logoRef = useRef(null);
 
@@ -23,29 +24,33 @@ export default function Header() {
     return (
         <header className='header-container'>
             <nav className='header-container__nav'>
+                {/* 2. Troque os <Link> por <button> e adicione o onClick */}
                 <div className='logo-header' ref={logoRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <Link to="/">
+                    {/* O Logo volta a ser o Banner */}
+                    <button onClick={() => setActiveComponent('Banner')}>
                         <img src={Logo} alt="Logo" />
-                    </Link>
-                </div>
-                <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <Link to="/cursos">CURSOS</Link>
+                    </button>
                 </div>
 
                 <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <Link to="/contato">CONTATO</Link>
+                    <button onClick={() => setActiveComponent('Cursos')}>Cursos</button>
                 </div>
 
                 <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <Link to="/local">LOCAL</Link>
+                    <button onClick={() => setActiveComponent('Contato')}>Contato</button>
                 </div>
 
                 <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <Link to="/servicos">SERVIÇOS</Link>
+                    <button onClick={() => setActiveComponent('Local')}>Local</button>
+                </div>
+
+                <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <button onClick={() => setActiveComponent('Servicos')}>Serviços</button>
                 </div>
 
                 <div className='header-container__nav__login-wrapper'>
-                    <Link className='login-link' to="/login">Entrar</Link>
+                    {/* Mantive o Link aqui, assumindo que /login é uma página separada */}
+                    <a className='login-link' href="/login">Entrar</a>
                 </div>
             </nav>
 
