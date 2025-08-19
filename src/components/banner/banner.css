@@ -17,11 +17,17 @@
     
     margin-top: 4rem;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 3rem;
     gap: 3.125rem;
     padding: 1.25rem 4.75rem;
-  
+    border: 0.40rem solid #fff;
     background-color: #fff;
     color: #000;
+  }
+
+  .introduction-container__actions-container button:hover {
+    background-color: #000;
+    transition: background-color 0.5s ease;
+  
   }
   

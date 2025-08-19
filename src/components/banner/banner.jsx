@@ -17,7 +17,7 @@ export default function Banner() {
                 <section className='introduction-container'>
                     <div className='introduction-container__actions-container'>
                         <SplitText
-                            text="Oi! Amiga!"
+                            text="Oi Amiga!"
                             className="text-2xl font-semibold text-center"
                             delay={130}
                             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
@@ -28,8 +28,8 @@ export default function Banner() {
                             onLetterAnimationComplete={handleAnimationComplete}
                         />
                         <h1>Marque sua sessão comigo hoje mesmo!</h1>
-                        <button>
-                            AGENDAR SERVIÇO
+                        <button onClick={() => window.open('https://wa.link/sxlltm', '_blank')}>
+                            <text  >AGENDAR SERVIÇO</text>
                             <FaWhatsapp size={36} color='#000' />
                         </button>
                     </div>
