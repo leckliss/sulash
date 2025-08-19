@@ -1,0 +1,53 @@
+.cursos-container {
+    padding: 5rem 10rem;
+    text-align: center;
+    color: #FF7EAF;
+}
+
+.cursos-container h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card-curso {
+    background-color: #1a1a1a;
+    border: 2px solid #FF7EAF;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-curso:hover {
+    transform: translateY(-10px);
+}
+
+.card-curso h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card-curso-detalhes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 126, 175, 0.9);
+    color: #000;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-curso-detalhes.visible {
+    transform: translateY(0);
+}

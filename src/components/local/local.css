@@ -1,0 +1,28 @@
+.local-container {
+    padding: 5rem 10rem;
+    color: #FF7EAF;
+    text-align: center;
+}
+
+.local-container h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.local-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.local-conteudo img {
+    max-width: 50%;
+    border-radius: 1rem;
+    border: 2px solid #FF7EAF;
+}
+
+.local-conteudo p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: left;
+}

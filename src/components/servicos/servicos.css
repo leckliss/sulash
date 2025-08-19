@@ -1,0 +1,39 @@
+.servicos-container {
+    padding: 5rem 10rem;
+    color: #FF7EAF;
+}
+
+.servicos-container h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.servico-item {
+    margin-bottom: 3rem;
+}
+
+.servico-item h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #FF7EAF;
+    padding-bottom: 0.5rem;
+}
+
+.servico-item p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.servico-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servico-item li {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}

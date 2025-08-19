@@ -1,0 +1,31 @@
+.contato-container {
+    padding: 5rem 10rem;
+    text-align: center;
+    color: #FF7EAF;
+}
+
+.contato-container h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contato-container p {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: #fff;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.redes-sociais a {
+    color: #FF7EAF;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #fff;
+}
