@@ -44,8 +44,8 @@ export default function Header() {
                     <Link to="/servicos">SERVIÇOS</Link>
                 </div>
 
-                <div className='header-container__nav__login1' >
-                    <Link className='header-container__nav__login2' to="/login">Entrar</Link>
+                <div className='header-container__nav__login-wrapper' onMouseEnter={handleMouseEnter}>
+                    <Link className='login-link' to="/login">Entrar</Link>
                 </div>
             </nav>
 

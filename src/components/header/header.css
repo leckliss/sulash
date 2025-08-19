@@ -31,33 +31,29 @@
 }
 
 .header-container__divisor {
-  height: 2px;
-  border-radius: 40px;
-  background-color: #FF7EAF;
-  position: absolute;
-  /* Posicionamento absoluto para mover a barra */
-  bottom: 0;
-  /* Alinhar na parte inferior do header */
-  transition: left 0.3s, width 0.3s;
-  /* Transição suave */
+    height: 2px;
+    border-radius: 40px;
+    background-color: #FF7EAF;
+    position: absolute;
+    bottom: 0;
+    transition: left 0.3s ease, width 0.3s ease, opacity 0.3s ease;
 }
 
-.header-container__nav__login1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  width: 8rem;
+.header-container__nav__login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 8rem;
+    border-radius: 22px;
+    transition: background-color 0.3s linear;
 }
 
-.header-container__nav__login1:hover{
-  background-color: #FF7EAF;
-  border-radius: 22px;
-
-  color: black;
-  cursor: pointer;
-  transition: all 0.3s linear;
+.header-container__nav__login-wrapper:hover {
+    background-color: #FF7EAF;
+    cursor: pointer;
 }
-.header-container__nav__login2:hover{
-  color: black;
+
+.header-container__nav__login-wrapper:hover .login-link {
+    color: black;
 }
