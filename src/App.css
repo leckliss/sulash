@@ -1,9 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
-  border-box: none;
+  box-sizing: border-box;
 }
-.app{
-  background-color: #0C0C0C;
+.app {
+  background-color: #0c0c0c;
+  overflow-x: hidden;
+}
+
+/* Adicione isso para garantir que a largura não ultrapasse a tela */
+body, #root, .app {
+  max-width: 100vw;
 }
