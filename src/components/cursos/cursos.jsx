@@ -32,7 +32,7 @@ function Cursos() {
                 <CardCurso
                     titulo="Curso Para Iniciantes"
                     formato="Online"
-                    detalhes="Curso com aulas online gravadas por mim e inclui a apostila em PDF."
+                    detalhes="Curso com aulas online gravadas por mim e inclui a apostila em PDF. Fio a Fio para iniciantes, Volume Russo e Reciclagem"
                 />
             </div>
         </div>
