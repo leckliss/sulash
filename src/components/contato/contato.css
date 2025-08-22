@@ -1,31 +1,112 @@
+/* Container principal */
 .contato-container {
-    padding: 5rem 10rem;
+    max-width: 680px;
+    margin: 4rem auto; /* Centraliza e adiciona margem */
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Cabeçalho com a foto e nome */
+.contato-header {
     text-align: center;
-    color: #FF7EAF;
+    margin-bottom: 3rem;
 }
 
-.contato-container h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #FF7EAF;
+    margin-bottom: 1rem;
 }
 
-.contato-container p {
-    font-size: 1.5rem;
-    margin-bottom: 4rem;
+.contato-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #fff;
 }
 
-.redes-sociais {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+.contato-header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
 }
 
-.redes-sociais a {
-    color: #FF7EAF;
+.instagram-icon {
+    color: #fff;
     transition: color 0.3s ease;
 }
 
-.redes-sociais a:hover {
+.instagram-icon:hover {
+    color: #FF7EAF;
+}
+
+/* Container dos botões de link */
+.contato-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Botões de link individual */
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFEBEC;
+    color: #000;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: 1px solid #FF7EAF;
+}
+
+.link-button:hover {
+    transform: scale(1.03);
+    background-color: #FF7EAF;
     color: #fff;
+}
+
+.link-button-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-button-number {
+    font-weight: bold;
+    color: #555;
+}
+
+.link-button:hover .link-button-number {
+    color: #fff;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Telas de Celular */
+@media (max-width: 768px) {
+    .contato-container {
+        margin: 2rem auto;
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contato-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .link-button {
+        padding: 1rem 1.25rem;
+        font-size: 0.85rem;
+    }
 }
