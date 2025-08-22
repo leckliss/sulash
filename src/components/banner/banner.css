@@ -1,26 +1,109 @@
 .introduction-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-    padding: 5rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  min-height: 80vh; /* Garante uma altura mínima */
+}
+
+.introduction-container__actions-container {
+  font-size: 3rem;
+  color: #fff;
+  max-width: 50%; /* Evita que o texto fique muito largo */
+  text-align: left;
+}
+
+.introduction-container__img-container {
+  max-width: 45%;
+}
+
+.introduction-container__img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.split-text-title {
+  font-size: 3rem; /* Mantém o tamanho original para a animação */
+  font-weight: bold;
+}
+
+.introduction-container__actions-container h1 {
+  font-size: 1.8rem; /* Tamanho da fonte do subtítulo */
+  margin-top: 1rem;
+}
+
+/* Estilos do botão movidos para o CSS */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  gap: 3.125rem;
+  padding: 1.25rem 4.75rem;
+  border: 0.40rem solid #fff;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Telas de Tablet */
+@media (max-width: 1024px) {
+  .introduction-container {
+    flex-direction: column; /* Altera para layout de coluna */
+    text-align: center;
+    padding: 4rem 2rem; /* Reduz o padding */
+    gap: 3rem;
   }
-  
+
+  .introduction-container__actions-container,
+  .introduction-container__img-container {
+    max-width: 100%; /* Ocupa a largura total */
+    text-align: center;
+  }
+
   .introduction-container__actions-container {
-    font-size: 3rem;
-    color: #fff;
+    font-size: 2.5rem; /* Reduz a fonte */
   }
-  
-  .introduction-container__actions-container button {
-    display: flex;
-    align-items: center;
-    
-    margin-top: 4rem;
-    font-weight: bold;
-    border-radius: 3rem;
-    gap: 3.125rem;
-    padding: 1.25rem 4.75rem;
-    border: 0.40rem solid #fff;
-    background-color: #fff;
-    color: #000;
+
+  .introduction-container__actions-container h1 {
+    font-size: 1.5rem;
   }
+
+  .whatsapp-button {
+    margin: 3rem auto 0; /* Centraliza o botão */
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Telas de Celular */
+@media (max-width: 768px) {
+  .introduction-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .introduction-container__actions-container {
+    font-size: 2rem;
+  }
+
+  .introduction-container__actions-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+}

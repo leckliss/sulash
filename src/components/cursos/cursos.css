@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-around;
     gap: 2rem;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
 }
 
 .card-curso {
@@ -25,6 +26,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
+    min-width: 280px; /* Largura mínima para os cards */
 }
 
 .card-curso:hover {
@@ -50,4 +52,39 @@
 
 .card-curso-detalhes.visible {
     transform: translateY(0);
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Telas de Tablet */
+@media (max-width: 1024px) {
+    .cursos-container {
+        padding: 4rem 2rem;
+    }
+
+    .card-curso {
+        width: 45%; /* Dois cards por linha */
+    }
+}
+
+/* Telas de Celular */
+@media (max-width: 768px) {
+    .cursos-container {
+        padding: 3rem 1.5rem;
+    }
+    
+    .cursos-container h2 {
+        font-size: 2.5rem; /* Reduz um pouco o título */
+        margin-bottom: 3rem;
+    }
+
+    .cards-container {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .card-curso {
+        width: 90%; /* Ocupa a maior parte da largura */
+        max-width: 400px; /* Define uma largura máxima */
+    }
 }
