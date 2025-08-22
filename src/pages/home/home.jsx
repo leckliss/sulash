@@ -30,13 +30,13 @@ function Home() {
     };
 
     return (
-        <div className='home'>
-            {/* 3. Passamos a função para o Header poder alterar o estado */}
-            <Header setActiveComponent={setActiveComponent} />
-            <main>
-                {/* 4. Chamamos a função que renderiza o componente ativo */}
-                {renderComponent()}
-            </main>
+        <div className="site-container">
+            <div className="content-wrap">
+                <Header setActiveComponent={setActiveComponent} />
+                <main>
+                    {renderComponent()}
+                </main>
+            </div>
             <Footer />
         </div>
     );

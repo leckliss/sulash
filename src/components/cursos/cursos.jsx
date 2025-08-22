@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './cursos.css'; // Corrigido
 
-const CardCurso = ({ titulo, detalhes }) => {
+const CardCurso = ({ titulo, formato, detalhes }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -11,6 +11,7 @@ const CardCurso = ({ titulo, detalhes }) => {
             onMouseLeave={() => setIsHovered(false)}
         >
             <h3>{titulo}</h3>
+            <p>{formato}</p>
             <div className={`card-curso-detalhes ${isHovered ? 'visible' : ''}`}>
                 <p>{detalhes}</p>
             </div>
@@ -21,19 +22,17 @@ const CardCurso = ({ titulo, detalhes }) => {
 function Cursos() {
     return (
         <div className="cursos-container">
-            <h2>Nossos Cursos</h2>
+            <h2>Por onde começar a aprender?</h2>
             <div className="cards-container">
                 <CardCurso
-                    titulo="Lash Lifting"
-                    detalhes="Aprenda a técnica que realça a curvatura natural dos cílios."
+                    titulo="Apostila"
+                    formato="PDF"
+                    detalhes="Aprenda as técnicas de extensão de cílios com essa apostila completa."
                 />
                 <CardCurso
-                    titulo="Volume Brasileiro"
-                    detalhes="Domine a técnica de volume com fios em formato de Y."
-                />
-                <CardCurso
-                    titulo="Volume Russo"
-                    detalhes="Crie um olhar denso e dramático com extensões de cílios."
+                    titulo="Curso Para Iniciantes"
+                    formato="Online"
+                    detalhes="Curso com aulas online gravadas por mim e inclui a apostila em PDF."
                 />
             </div>
         </div>
