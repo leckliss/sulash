@@ -1,39 +1,165 @@
 .servicos-container {
     padding: 5rem 10rem;
     color: #FF7EAF;
+    font-family: 'Poppins', sans-serif;
 }
 
 .servicos-container h2 {
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.servicos-descricao {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
     margin-bottom: 4rem;
 }
 
-.servico-item {
-    margin-bottom: 3rem;
+.tabelas-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-.servico-item h3 {
-    font-size: 2rem;
+.tabela-servicos {
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #FF7EAF;
+    flex: 1 1 400px; /* Flex-grow, flex-shrink, flex-basis */
+    min-width: 300px;
+}
+
+.tabela-servicos h3 {
+    font-size: 1.8rem;
     color: #fff;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #FF7EAF;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
+    border-bottom: 1px solid #FF7EAF;
 }
 
-.servico-item p {
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 1rem;
-}
-
-.servico-item ul {
+.tabela-servicos ul {
     list-style: none;
     padding: 0;
 }
 
-.servico-item li {
+.tabela-servicos li {
+    display: flex;
+    justify-content: space-between;
     font-size: 1.1rem;
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #444;
+}
+
+.tabela-servicos li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.tabela-servicos .valor {
+    font-weight: bold;
+    color: #FF7EAF;
+}
+
+.manutencao-aviso {
+    margin: 2rem auto 4rem auto;
+    background-color: rgba(255, 235, 236, 0.1);
+    border-left: 4px solid #FF7EAF;
+    padding: 1.5rem;
+    max-width: 800px;
+    text-align: center;
+}
+
+.manutencao-aviso p {
+    color: #eee;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Formas de Pagamento */
+.pagamento-container {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.pagamento-container h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.formas-pagamento {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.formas-pagamento span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #1a1a1a;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid #444;
+}
+
+.pagamento-aviso {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 1024px) {
+    .servicos-container {
+        padding: 4rem 2rem;
+    }
+
+    .tabelas-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabela-servicos {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicos-container {
+        padding: 3rem 1.5rem;
+    }
+
+    .servicos-container h2 {
+        font-size: 2.5rem;
+    }
+
+    .tabela-servicos h3 {
+        font-size: 1.5rem;
+    }
+
+    .tabela-servicos li {
+        font-size: 1rem;
+    }
+
+    .formas-pagamento {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .formas-pagamento span {
+        padding: 0.6rem 1rem;
+    }
 }

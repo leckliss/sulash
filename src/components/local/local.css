@@ -6,23 +6,146 @@
 
 .local-container h2 {
     font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.local-container p {
+    font-size: 1.2rem;
+    color: #ccc;
     margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.local-conteudo {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+/* Container principal da galeria */
+.gallery-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Proporção de 2/3 para a imagem grande e 1/3 para as pequenas */
+    gap: 1rem;
+    width: 100%;
+    max-width: 1000px; /* Controla o tamanho máximo */
+    margin: 0 auto;
+    aspect-ratio: 4 / 3; /* Proporção do container geral (largura / altura) */
 }
 
-.local-conteudo img {
-    max-width: 50%;
+/* Item grande (imagem esquerda) */
+.gallery-item-large {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
     border-radius: 1rem;
-    border: 2px solid #FF7EAF;
+    height: 100%;
 }
 
-.local-conteudo p {
-    font-size: 1.5rem;
-    color: #fff;
-    text-align: left;
+/* Container das imagens pequenas (direita) */
+.gallery-item-small-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Duas linhas de altura igual */
+    gap: 1rem;
+    height: 100%;
+}
+
+.gallery-item-small {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para todas as imagens da galeria */
+.gallery-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ESSA é a propriedade que "corta" a imagem para preencher o espaço */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-wrapper .gallery-item-large:hover img,
+.gallery-wrapper .gallery-item-small:hover img {
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+
+/* Overlay para indicar que é clicável */
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1rem;
+}
+
+.gallery-item-large:hover .media-overlay,
+.gallery-item-small:hover .media-overlay {
+    opacity: 1;
+}
+
+/* --- Estilos do Modal (Lightbox) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 1024px) {
+    .local-container {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .local-container {
+        padding: 3rem 1.5rem;
+    }
+
+    .gallery-wrapper {
+        grid-template-columns: 1fr; /* Coluna única */
+        grid-template-rows: 2fr 1fr 1fr; /* Uma linha para cada imagem */
+        aspect-ratio: 1 / 1.2; /* Ajusta a proporção para o modo retrato */
+    }
 }
