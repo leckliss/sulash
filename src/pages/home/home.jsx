@@ -10,7 +10,7 @@ import './home.css';
 
 function Home() {
     // 1. Estado para controlar o componente ativo
-    const [activeComponent, setActiveComponent] = useState('Banner');
+    const [activeComponent, setActiveComponent] = useState('Contato');
 
     // 2. Função para renderizar o componente correto
     const renderComponent = () => {
@@ -23,9 +23,11 @@ function Home() {
                 return <Local />;
             case 'Servicos':
                 return <Servicos />;
-            // Por padrão, mostra o Banner
-            default:
+            case 'Banner':
                 return <Banner />;
+            // Por padrão, mostra o Contato
+            default:
+                return <Contato />;
         }
     };
 

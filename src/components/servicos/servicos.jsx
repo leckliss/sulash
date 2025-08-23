@@ -1,6 +1,6 @@
 import React from 'react';
 import './servicos.css';
-import { FaPix, FaMoneyBillWave, FaCreditCard, FaUniversity } from 'react-icons/fa6';
+import { FaPix, FaMoneyBillWave, FaCreditCard, FaLandmark } from 'react-icons/fa6';
 
 // Dados dos serviços extraídos das imagens
 const servicos = {
@@ -29,9 +29,7 @@ const servicos = {
     { nome: "Volume Fox Eyes", valor: "R$110,00" },
     { nome: "Volume Russo Marrom", valor: "R$110,00" },
     { nome: "Volume Egípcio", valor: "R$110,00" },
-    { nome: "Remoção", valor: "R$50,00" }
-  ],
-  "Outros Serviços": [
+    { nome: "Remoção", valor: "R$50,00" },
     { nome: "Lash Lifting", valor: "R$120,00" }
   ]
 };
@@ -66,7 +64,7 @@ function Servicos() {
                 <h3>Aceitamos</h3>
                 <div className="formas-pagamento">
                     <span><FaPix /> Pix</span>
-                    <span><FaUniversity /> Transferência</span>
+                    <span><FaLandmark /> Transferência</span>
                     <span><FaMoneyBillWave /> Dinheiro</span>
                     <span><FaCreditCard /> Crédito*</span>
                     <span><FaCreditCard /> Débito</span>
