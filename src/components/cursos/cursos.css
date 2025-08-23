@@ -81,10 +81,11 @@
     .cards-container {
         flex-direction: column; /* Empilha os cards verticalmente */
         align-items: center; /* Centraliza os cards */
+        width: 100vw;
     }
 
     .card-curso {
-        width: 90%; /* Ocupa a maior parte da largura */
+        width: 80%; /* Ocupa a maior parte da largura */
         max-width: 400px; /* Define uma largura máxima */
     }
 }
