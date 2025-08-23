@@ -140,6 +140,10 @@
 @media (max-width: 768px) {
     .servicos-container {
         padding: 3rem 1.5rem;
+        width: 100vw;
+    }
+    .tabelas-wrapper{
+        width: 80%;
     }
 
     .servicos-container h2 {

@@ -1,16 +1,18 @@
+/* --- Estilos para Desktop (Layout Original) --- */
 .footer-container {
     display: flex;
+    flex-direction: column; /* Começa como coluna para alinhar Tesseract abaixo */
     align-items: center;
-    flex-direction: column;
     gap: 2.5rem;
-    padding: 2rem;
+    padding: 2rem 5rem; /* Padding original para desktop */
 }
 
-.footer-container__div{
+/* Este é o container que agrupa o logo e os links na mesma linha */
+.footer-content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; /* Garante que fiquem lado a lado */
     width: 100%;
 }
 
@@ -18,14 +20,39 @@
     width: 10rem;
 }
 
-.footer-container-div_botoes{
+.social-links {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.footer-container-div_botoes a {
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.7rem;
     border: 2px solid #FF7EAF;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 126, 175, 0.1);
+}
+
+.tesseract-logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* --- Media Query para Celular --- */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 2rem 1.5rem; /* Padding menor para celular */
+    }
+    
+    /* No celular, o wrapper também vira uma coluna */
+    .footer-content-wrapper {
+        flex-direction: column;
+        gap: 2.5rem; /* Espaçamento entre o logo e os links */
+    }
 }

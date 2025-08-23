@@ -1,23 +1,19 @@
 import LogoFooter from '../../assets/logos/LogoFooter.png';
 import TesseractGroup from '../../assets/logos/TesseractGroup.svg';
-
-import React, { Component } from 'react';
-
 import './footer.css';
 import { FaWhatsapp, FaInstagram, FaTiktok } from 'react-icons/fa';
-
 
 export default function Footer() {
   return (
     <footer className='footer-container'>
-      <div className="footer-container__div" >
-        <img className="logo-footer" src={LogoFooter} />
+      <div className="footer-content-wrapper" >
+        <img className="logo-footer" alt="Logo Su Lash Designer" src={LogoFooter} />
 
-        <div className="footer-container-div_botoes">
+        <div className="social-links">
           <a href='https://wa.link/sxlltm' target="_blank" rel="noopener noreferrer">
              <FaWhatsapp size={32} color='#FF7EAF' />
           </a>
-          <a href='https://www.instagram.com/sulashdesigner/'target="_blank" rel="noopener noreferrer">
+          <a href='https://www.instagram.com/sulashdesigner/' target="_blank" rel="noopener noreferrer">
             <FaInstagram size={32} color='#FF7EAF' />
           </a>
           <a href='https://www.tiktok.com/@sulashdesigner' target="_blank" rel="noopener noreferrer">
@@ -26,7 +22,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <img src={TesseractGroup}/>
+      <img className="tesseract-logo" alt="Logo Tesseract Group" src={TesseractGroup}/>
     </footer>
   );
 }
